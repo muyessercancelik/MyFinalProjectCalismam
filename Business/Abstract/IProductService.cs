@@ -16,5 +16,8 @@ namespace Business.Abstract
         IDataResult<List<ProductDetailDto>> GetProductDetails();
         IDataResult<Product> GetById(int productId);
         IResult Add(Product product); //void olan yerde IResult 
+        Result Update(Product product);
+
+        IResult AddTransactionalTest(Product product); // Aynı süreçte iki veri tabanı işlemi var
     }
 }
